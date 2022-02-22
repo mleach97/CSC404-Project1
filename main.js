@@ -1,4 +1,3 @@
-'use strict'
 var prompt = require('prompt');
 let cHW = require('./computeHW');
 let cEG = require('./computeExam');
@@ -18,42 +17,20 @@ prompt.start();
         
       },
 
-      homework1: {type: 'number'},
-      homework2: {type: 'number'},
-      homework3: {type: 'number'},
+      homework1: { type: 'number'},
+      homework2: { type: 'number'},
+      homework3:  {type: 'number'},
 
       exam1: { type: 'number'},
       exam2: { type: 'number'}
     }
   };
 
-  var student = {
-    name: '',
-    id: '',
-    homework1: 60,
-    homework2: 60,
-    homework3: 60,
-    exam1: 60,
-    exam2: 60,
-    at1: true,
-    at2: true,
-    at3: true,
-    at4: true,
-    at5: true,
-    adjust: true,
-    final: 100,
-    letter: ' '
-  };
 
- 
- 
-  //
   // Get two properties from the user: username and email
-  //
   prompt.get(schema, function (err, result) {
-    //
     // Log the results.
-    //
+
     console.log('Command-line input received:');
     console.log('  username: ' + result.username);
     console.log('  email: ' + result.email);
@@ -75,8 +52,5 @@ prompt.start();
 
   });
 
- 
- //
   // Start the prompt
-  //
   prompt.start();
