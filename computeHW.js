@@ -13,7 +13,7 @@ exports.computeHW = function (HW1, HW2, HW3){
         return -1;
     }
 
-    var finalHWGrade = ((HW1 + HW2 + HW3)/15);
+    var finalHWGrade = (((HW1 + HW2 + HW3)/3)*0.2);
 
     return finalHWGrade;
 }
