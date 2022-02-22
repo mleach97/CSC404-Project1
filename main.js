@@ -2,6 +2,7 @@ var prompt = require('prompt');
 let cHW = require('./computeHW');
 let cEG = require('./computeExam');
 let cFE = require('./computeFinal');
+let cFLG = require('./computeFinalLetterGrade')
 
 prompt.start();
 
@@ -32,7 +33,7 @@ prompt.start();
     // Log the results.
 
     console.log('Command-line input received:');
-    console.log('  username: ' + result.username);
+    console.log('  username: ' + result.name);
     console.log('  email: ' + result.email);
     console.log('  homework1:' + result.homework1);
     console.log('  homework2:' + result.homework2);
@@ -46,9 +47,10 @@ prompt.start();
     hwGrade = cHW.computeHW(result.homework1, result.homework2, result.homework3);
     examGrade = cEG.computeExams(result.exam1, result.exam2);
     finalGrade = cFE.getFinalGrade(hwGrade, examGrade);
+    finalLetterGrade = cFLG.getFinalLetterGrade(finalGrade)
 
-    console.log("Final grade is =", finalGrade);
-
+    console.log("Final grade is ", finalGrade);
+    console.log("Final letter grade is ", finalLetterGrade)
 
   });
 
