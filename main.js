@@ -49,7 +49,7 @@ prompt.start();
     finalGrade = cFE.getFinalGrade(hwGrade, examGrade);
     finalLetterGrade = cFLG.getFinalLetterGrade(finalGrade)
 
-    console.log("Final grade is ", finalGrade);
+    //console.log("Final grade is ", finalGrade);
     console.log("Final letter grade is ", finalLetterGrade)
 
   });
