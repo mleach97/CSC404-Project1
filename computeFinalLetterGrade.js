@@ -1,3 +1,4 @@
+/* Returns the corresponding letter grade for each range. Return error if finalGrade is out of range. */
 exports.getFinalLetterGrade = function(finalGrade){
     switch (true) {
         case (finalGrade >= 93):
